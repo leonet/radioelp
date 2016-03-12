@@ -17,6 +17,7 @@
 * under the License.
 */
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -38,15 +39,6 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-}
-
-body {
-  background: url(../img/fondo-radio.jpg) no-repeat fixed 50% 50%;
-  background-size: auto 100%;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 0.875em;
-  margin: 0;
-  padding: 0;
 }
 
 article,
@@ -258,6 +250,15 @@ th {
 /*--------------------------------------------------------------
 # Styles
 --------------------------------------------------------------*/
+body {
+  background: url(../img/fondo-radio.jpg) no-repeat fixed 50% 50%;
+  background-size: auto 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
 #loader {
   position: absolute;
   top: 0;
@@ -351,6 +352,7 @@ th {
   background: #89191F;
   color: #FFF;
   padding: 1em;
+  border-bottom: solid 5px #df6018;
 }
 
 #page .header img {
@@ -363,9 +365,34 @@ th {
   padding: 1em;
 }
 
+#page .content .header-content {
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 1em;
+}
+
+#page .content .header-content h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  line-height: 1.1;
+  color: #FFF;
+  font-weight: 400;
+  margin: 0 0 0.2em 0;
+}
+
+#page .content .header-content h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  color: #FFF;
+  font-weight: lighter;
+  margin: 0;
+}
+
 #page .content audio {
   display: block;
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -378,6 +405,11 @@ th {
   text-align: center;
   color: #FFF;
   padding: 0.4em;
+}
+
+#page .footer a {
+  color: #df6018;
+  text-decoration: none;
 }
 
 @keyframes fade {

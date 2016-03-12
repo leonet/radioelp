@@ -1,0 +1,197 @@
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+@import 'normalize';
+
+/*--------------------------------------------------------------
+# Styles
+--------------------------------------------------------------*/
+
+body {
+    background: url(../img/fondo-radio.jpg) no-repeat fixed 50% 50%;
+    background-size: auto 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+#loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.90);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dots {
+        margin: 100px auto;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        text-align: center;
+        animation: sk-rotate 2.0s infinite linear;
+
+        .dot1,
+        .dot2 {
+            width: 60%;
+            height: 60%;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            background-color: #FFF;
+            border-radius: 100%;
+            animation: sk-bounce 2.0s infinite ease-in-out;
+        }
+
+        .dot2 {
+            top: auto;
+            bottom: 0;
+            animation-delay: -1.0s;
+        }
+    }
+}
+
+@-webkit-keyframes sk-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes sk-rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes sk-bounce {
+    0%, 100% {
+        -webkit-transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+
+#page {
+    width: 100%;
+    height:100%;
+    position: relative;
+
+    .header {
+        width: 100%;
+        background: #89191F;
+        color: #FFF;
+        padding: 1em;
+        border-bottom: solid 5px #df6018;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-height: 40px;
+        }
+    }
+
+    .content {
+        padding: 1em;
+
+        .header-content {
+            padding: 1em;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            border-radius: 16px;
+            margin-bottom: 1em;
+
+            h1 {
+                font-family: 'Pacifico', cursive;
+                font-size: 2.5em;
+                line-height: 1.1;
+                color: #FFF;
+                font-weight: 400;
+                margin: 0 0 0.2em 0;
+            }
+            
+            h3 {
+                font-size: 1.5em;
+                line-height: 1;
+                color: #FFF;
+                font-weight: lighter;
+                margin: 0;
+            }
+        }
+
+        audio {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #89191F;
+        text-align: center;
+        color: #FFF;
+        padding: 0.4em;
+        
+        a {
+            color: #df6018;
+            text-decoration: none;
+        }
+    }
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
