@@ -22,58 +22,58 @@ under the License.
 -->
 
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script src="js/jquery.min.js"></script>
 
-        <title>Radio ELP</title>
-    </head>
+    <title>Radio ELP</title>
+  </head>
 
-    <body>
+  <body>
 
-        <script>
-            $(window).load(function () {
-                $('#loader').hide();
-            });
-        </script>
+    <script>
+      $(window).load(function () {
+        $('#loader').hide();
+      });
+    </script>
 
-        <div id="loader">
-            <div class="dots">
-                <div class="dot1"></div>
-                <div class="dot2"></div>
-            </div>
-        </div>
+    <div id="loader">
+      <div class="dots">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
 
-        <div id="page">
-            <header class="header">
-                <img src="img/logo.png" alt="Radio ELP"/>
-            </header>
+    <div id="page">
+      <header class="header">
+        <img src="img/logo.png" alt="Radio ELP"/>
+      </header>
 
-            <main class="content">
-                <header class="header-content">
-                    <h1>Radio en VIVO</h1>
-                    <h3>Reproduciendo...</h3>
-                </header>
-                <audio src="http://64.37.55.229:8348/;stream.mp3" autoplay controls>
-                    <p>Su navegador no soporta el elemento de audio.</p>
-                </audio>
-            </main>
+      <main class="content">
+        <header class="header-content">
+          <h1>Radio en VIVO</h1>
+          <h3>Reproduciendo...</h3>
+        </header>
+        <audio src="http://64.37.55.229:8348/;stream.mp3" autoplay controls>
+          <p>Su navegador no soporta el elemento de audio.</p>
+        </audio>
+      </main>
 
-            <footer class="footer">
-                <p>Copyright <script type="text/javascript"> var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.libredepsicologia.com/" target="_blank">Escuela libre de Psicolog&iacute;a</a>. Todos los derechos reservados.</p>
-            </footer>
-        </div>
+      <footer class="footer">
+        <p>Copyright <script type="text/javascript"> var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.libredepsicologia.com/" target="_blank">Escuela libre de Psicolog&iacute;a</a>. Todos los derechos reservados.</p>
+      </footer>
+    </div>
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+      app.initialize();
+    </script>
+  </body>
 </html>
